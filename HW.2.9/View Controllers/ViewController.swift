@@ -12,15 +12,16 @@ class SpringViewController: UIViewController {
     
     @IBOutlet var imageSpring: SpringImageView!
     
-    @IBOutlet var infoSpringLabel: SpringLabel!
+ 
     
+    @IBOutlet var springView: SpringView!
     
-    @IBOutlet var infoText: SpringView!
+//    @IBOutlet var infoText: SpringView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        infoSpringLabel.transform = CGAffineTransform(rotationAngle: 0.14)
+//        infoSpringLabel.transform = CGAffineTransform(rotationAngle: 0.14)
     }
 
     
@@ -29,17 +30,17 @@ class SpringViewController: UIViewController {
     @IBAction func buttonPressed() {
         
         
-        infoText.animation = "flipX"
+        springView.animation = "flipX"
     
         
         
-        infoText.animate()
+//        inf÷oText.animate()
         
         
-        imageSpring.animation = "flipX"
-        imageSpring.curve = "easeIn"
-        imageSpring.duration = 1
-        imageSpring.animate()
+//        imageSpring.animation = "flipX"
+        springView.curve = "easeIn"
+//        imageSpring.duration = 1
+        springView.animate()
     }
     
     

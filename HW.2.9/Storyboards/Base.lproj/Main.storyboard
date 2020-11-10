@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,31 +13,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SpringViewController" customModule="HW_2_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kyle3" translatesAutoresizingMaskIntoConstraints="NO" id="AvC-3X-LyI" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="-11.5" y="16" width="343" height="307.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="307.5" id="Nb5-tM-NNk"/>
-                                    <constraint firstAttribute="width" constant="343" id="oPA-ha-15o"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бла Бла Бла Бла Бла Бла Бла Бла Б" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iLb-l7-r0U">
-                                <rect key="frame" x="133" y="44" width="150" height="104"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="6dU-NS-nEM"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="104" id="XzG-83-CLV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YME-XJ-H6V" customClass="SpringView" customModule="Spring">
-                                <rect key="frame" x="40" y="331" width="240" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXt-If-wiU" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="63" y="20" width="288" height="288"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i4-5a-pJU" customClass="SpringLabel" customModule="Spring">
-                                        <rect key="frame" x="99" y="53.5" width="42" height="21"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kyle3" translatesAutoresizingMaskIntoConstraints="NO" id="Lmx-f5-psc">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="288"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lmlm lklmlkfghjk jhgj" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-5N-nVC">
+                                        <rect key="frame" x="111" y="19" width="155" height="112"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="0PZ-AN-6EP"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -45,58 +34,33 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="BPL-z4-mKF"/>
-                                    <constraint firstItem="9i4-5a-pJU" firstAttribute="centerX" secondItem="YME-XJ-H6V" secondAttribute="centerX" id="En9-go-bVi"/>
-                                    <constraint firstAttribute="width" constant="240" id="OzI-tm-M1I"/>
-                                    <constraint firstItem="9i4-5a-pJU" firstAttribute="centerY" secondItem="YME-XJ-H6V" secondAttribute="centerY" id="RPC-10-qx9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lmx-f5-psc" secondAttribute="bottom" id="3y9-UU-ZDO"/>
+                                    <constraint firstAttribute="width" constant="288" id="8PV-kK-lfp"/>
+                                    <constraint firstItem="9r2-5N-nVC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="hXt-If-wiU" secondAttribute="leading" constant="111" id="Eea-N2-vN2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lmx-f5-psc" secondAttribute="trailing" id="J74-Ir-MC8"/>
+                                    <constraint firstItem="Lmx-f5-psc" firstAttribute="leading" secondItem="hXt-If-wiU" secondAttribute="leading" id="OvE-Vd-0l3"/>
+                                    <constraint firstAttribute="trailing" secondItem="9r2-5N-nVC" secondAttribute="trailing" constant="22" id="UOV-NY-WGU"/>
+                                    <constraint firstAttribute="height" constant="288" id="XUJ-JG-vAc"/>
+                                    <constraint firstItem="9r2-5N-nVC" firstAttribute="top" secondItem="hXt-If-wiU" secondAttribute="top" constant="19" id="aAi-0P-75V"/>
+                                    <constraint firstItem="Lmx-f5-psc" firstAttribute="top" secondItem="hXt-If-wiU" secondAttribute="top" id="kXm-YZ-CSN"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TW-cx-4Yq">
-                                <rect key="frame" x="40" y="497" width="240" height="34"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="GlN-9Y-Cxy"/>
-                                </constraints>
-                                <state key="normal" title="text">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgr-WX-Z8u"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="AvC-3X-LyI" firstAttribute="top" secondItem="iLb-l7-r0U" secondAttribute="bottom" constant="-132" id="Gti-SL-D6l"/>
-                            <constraint firstItem="AvC-3X-LyI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="INd-eJ-osD"/>
-                            <constraint firstItem="YME-XJ-H6V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OKA-Q8-D87"/>
-                            <constraint firstItem="2TW-cx-4Yq" firstAttribute="top" secondItem="YME-XJ-H6V" secondAttribute="bottom" constant="38" id="R7k-GV-khW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2TW-cx-4Yq" secondAttribute="bottom" constant="37" id="WKy-QK-dYR"/>
-                            <constraint firstItem="2TW-cx-4Yq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPu-ck-cPw"/>
-                            <constraint firstItem="AvC-3X-LyI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="sat-yS-7af"/>
-                            <constraint firstItem="iLb-l7-r0U" firstAttribute="leading" secondItem="AvC-3X-LyI" secondAttribute="trailing" constant="-198.66666666666663" id="vCc-fs-oAm"/>
+                            <constraint firstItem="hXt-If-wiU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aD8-sg-JvS"/>
+                            <constraint firstItem="hXt-If-wiU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lfJ-Vp-odE"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="imageSpring" destination="AvC-3X-LyI" id="mnB-9D-waw"/>
-                        <outlet property="infoSpringLabel" destination="iLb-l7-r0U" id="ktc-Sz-kuR"/>
-                        <outlet property="infoText" destination="YME-XJ-H6V" id="CaY-8u-c12"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="62.771739130434788"/>
+            <point key="canvasLocation" x="131.8840579710145" y="61.956521739130437"/>
         </scene>
     </scenes>
     <resources>
         <image name="Kyle3" width="1552" height="1552"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
