@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,7 +58,6 @@
 				A671C94AFA3313C016F123D1 /* Pods-HW.2.9.debug.xcconfig */,
 				DFF348D0A862D4EE8726DB56 /* Pods-HW.2.9.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,15 +83,55 @@
 		3BDFAC75255A610200CD48A3 /* HW.2.9 */ = {
 			isa = PBXGroup;
 			children = (
-				3BDFAC76255A610200CD48A3 /* AppDelegate.swift */,
-				3BDFAC78255A610200CD48A3 /* SceneDelegate.swift */,
-				3BDFAC7A255A610200CD48A3 /* ViewController.swift */,
-				3BDFAC7C255A610200CD48A3 /* Main.storyboard */,
-				3BDFAC7F255A610300CD48A3 /* Assets.xcassets */,
-				3BDFAC81255A610300CD48A3 /* LaunchScreen.storyboard */,
-				3BDFAC84255A610300CD48A3 /* Info.plist */,
+				A5C82B39255AADDF004CA5CE /* Storyboards */,
+				A5C82B38255AADCF004CA5CE /* View Controllers */,
+				A5C82B37255AADC1004CA5CE /* Models */,
+				A5C82B36255AADAB004CA5CE /* Supporting Files */,
+				A5C82B35255AACF3004CA5CE /* Data Layer */,
 			);
 			path = HW.2.9;
+			sourceTree = "<group>";
+		};
+		A5C82B35255AACF3004CA5CE /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		A5C82B36255AADAB004CA5CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFAC76255A610200CD48A3 /* AppDelegate.swift */,
+				3BDFAC78255A610200CD48A3 /* SceneDelegate.swift */,
+				3BDFAC7F255A610300CD48A3 /* Assets.xcassets */,
+				3BDFAC84255A610300CD48A3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5C82B37255AADC1004CA5CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A5C82B38255AADCF004CA5CE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFAC7A255A610200CD48A3 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A5C82B39255AADDF004CA5CE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3BDFAC7C255A610200CD48A3 /* Main.storyboard */,
+				3BDFAC81255A610300CD48A3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNER64Q73Y;
-				INFOPLIST_FILE = HW.2.9/Info.plist;
+				INFOPLIST_FILE = "HW.2.9/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -370,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.ageres7.HW-2-9";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -382,7 +421,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RNER64Q73Y;
-				INFOPLIST_FILE = HW.2.9/Info.plist;
+				INFOPLIST_FILE = "HW.2.9/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.ageres7.HW-2-9";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
