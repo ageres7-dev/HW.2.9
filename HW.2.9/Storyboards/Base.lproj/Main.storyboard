@@ -22,8 +22,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kyle3" translatesAutoresizingMaskIntoConstraints="NO" id="Lmx-f5-psc">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="288"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lmlm lklmlkfghjk jhgj" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-5N-nVC">
-                                        <rect key="frame" x="111" y="19" width="155" height="112"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверка текста в блоке сауспарка" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-5N-nVC">
+                                        <rect key="frame" x="114.33333333333334" y="19" width="151.66666666666663" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="112" id="0PZ-AN-6EP"/>
                                         </constraints>
@@ -36,7 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Lmx-f5-psc" secondAttribute="bottom" id="3y9-UU-ZDO"/>
                                     <constraint firstAttribute="width" constant="288" id="8PV-kK-lfp"/>
-                                    <constraint firstItem="9r2-5N-nVC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="hXt-If-wiU" secondAttribute="leading" constant="111" id="Eea-N2-vN2"/>
+                                    <constraint firstItem="9r2-5N-nVC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hXt-If-wiU" secondAttribute="leading" constant="111" id="Eea-N2-vN2"/>
                                     <constraint firstAttribute="trailing" secondItem="Lmx-f5-psc" secondAttribute="trailing" id="J74-Ir-MC8"/>
                                     <constraint firstItem="Lmx-f5-psc" firstAttribute="leading" secondItem="hXt-If-wiU" secondAttribute="leading" id="OvE-Vd-0l3"/>
                                     <constraint firstAttribute="trailing" secondItem="9r2-5N-nVC" secondAttribute="trailing" constant="22" id="UOV-NY-WGU"/>
@@ -45,14 +45,34 @@
                                     <constraint firstItem="Lmx-f5-psc" firstAttribute="top" secondItem="hXt-If-wiU" secondAttribute="top" id="kXm-YZ-CSN"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfH-nI-Okg">
+                                <rect key="frame" x="47" y="642" width="320" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="Pu6-ld-Tbk"/>
+                                    <constraint firstAttribute="height" constant="44" id="qch-mN-4WM"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="APj-Ed-CBx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SfH-nI-Okg" secondAttribute="bottom" constant="50" id="5n5-bK-M6S"/>
                             <constraint firstItem="hXt-If-wiU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aD8-sg-JvS"/>
                             <constraint firstItem="hXt-If-wiU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lfJ-Vp-odE"/>
+                            <constraint firstItem="SfH-nI-Okg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vk5-mP-hDF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoTextLabel" destination="9r2-5N-nVC" id="Qr4-Tt-1Uv"/>
+                        <outlet property="springView" destination="hXt-If-wiU" id="YsN-b4-waF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,6 +81,12 @@
     </scenes>
     <resources>
         <image name="Kyle3" width="1552" height="1552"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

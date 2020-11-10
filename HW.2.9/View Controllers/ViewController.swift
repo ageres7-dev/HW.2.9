@@ -15,13 +15,14 @@ class SpringViewController: UIViewController {
  
     
     @IBOutlet var springView: SpringView!
+    @IBOutlet var infoTextLabel: UILabel!
     
 //    @IBOutlet var infoText: SpringView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        infoSpringLabel.transform = CGAffineTransform(rotationAngle: 0.14)
+        infoTextLabel.transform = CGAffineTransform(rotationAngle: 0.14)
     }
 
     
