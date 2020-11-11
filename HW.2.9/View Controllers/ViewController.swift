@@ -10,12 +10,9 @@ import Spring
 
 class SpringViewController: UIViewController {
     
-    @IBOutlet var imageSpring: SpringImageView!
-    
- 
-    
     @IBOutlet var springView: SpringView!
     @IBOutlet var infoTextLabel: UILabel!
+    @IBOutlet var nextAnimationButton: UIButton!
     
 //    @IBOutlet var infoText: SpringView!
     
@@ -23,6 +20,8 @@ class SpringViewController: UIViewController {
         super.viewDidLoad()
         
         infoTextLabel.transform = CGAffineTransform(rotationAngle: 0.14)
+        
+        nextAnimationButton.layer.cornerRadius = 15
     }
 
     
@@ -40,7 +39,7 @@ class SpringViewController: UIViewController {
         
 //        imageSpring.animation = "flipX"
         springView.curve = "easeIn"
-//        imageSpring.duration = 1
+        springView.duration = 1
         springView.animate()
     }
     
