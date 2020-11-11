@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="44" id="qch-mN-4WM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="text">
+                                <state key="normal" title="Run">
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>

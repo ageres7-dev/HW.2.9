@@ -5,6 +5,76 @@
 //  Created by Сергей on 11.11.2020.
 //
 
+ 
+import Spring
+
+struct Animation{
+    var preset: String
+    var curve: String
+    var force: CGFloat
+    var duratinon: CGFloat
+    var deley: CGFloat
+}
+ 
+extension Animation {
+    static func getRandomAnimation() -> Animation {
+        
+        Animation(
+            preset: DataManager.shared.animationPresets.randomElement() ?? "",
+            curve: DataManager.shared.animationCurves.randomElement() ?? "",
+            force: CGFloat.random(in: 1...5),
+            duratinon: CGFloat.random(in: 0.5...5),
+            deley: CGFloat.random(in: 0...5)
+        )
+    }
+}
+ 
+ 
+ 
+
+
+
+//extension SpringView {
+//    static func getRandomAnimation() {
+//
+//
+        
+        
+        /*
+        private let animationPresets = ["slideRight", "slideDown", "slideUp",
+                                "squeezeLeft", "squeezeRight", "squeezeDown",
+                                "squeezeUp", "fadeIn", "fadeOut",
+                                "fadeOutIn", "fadeInLeft", "fadeInRight",
+                                "fadeInDown", "fadeInUp", "zoomIn",
+                                "zoomOut", "fall", "shake",
+                                "pop", "flipX", "flipY",
+                                "morph", "squeeze", "flash",
+                                "wobble", "swing"]
+        
+        let animationCurves = ["easeIn", "easeOut", "easeInOut",
+                               "linear", "spring", "easeInSine",
+                               "easeOutSine", "easeInOutSine", "easeInQuad",
+                               "easeOutQuad", "easeInOutQuad", "easeInCubic",
+                               "easeOutCubic", "easeInOutCubic", "easeInQuart",
+                               "easeOutQuart", "easeInOutQuart", "easeInQuint",
+                               "easeOutQuint", "easeInOutQuint", "easeInExpo",
+                               "easeOutExpo", "easeInOutExpo", "easeInCirc",
+                               "easeOutCirc", "easeInOutCirc", "easeInBack",
+                               "easeOutBack", "easeInOutBack"]
+        */
+//    }
+//
+//}
+
+ 
+
+
+
+
+
+
+
+/*
 import Spring
 
 
@@ -80,3 +150,7 @@ public enum AnimationCurve: String {
     case easeOutBack
     case easeInOutBack
 }
+
+
+
+*/

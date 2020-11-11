@@ -5,7 +5,7 @@
 //  Created by Сергей Долгих on 10.11.2020.
 //
 
-import UIKit
+//import UIKit
 import Spring
 
 class SpringViewController: UIViewController {
@@ -41,7 +41,7 @@ class SpringViewController: UIViewController {
     
         //TODO
         
-        sender.setTitle("Next \(animations[currentIndices + 1 ])", for: .normal)
+        sender.setTitle("Run \(animations[currentIndices + 1 ])", for: .normal)
         
         nextSpring.animation = animations[currentIndices]
         nextSpring.curve = curves[currentIndices]
@@ -50,6 +50,7 @@ class SpringViewController: UIViewController {
 //        springView.curve = curves[currentIndices]
         springView = nextSpring
         springView.animate()
+        
         
         infoTextLabel.text = getInfoOfSpring()
         infoTextLabel.textAlignment = .right
