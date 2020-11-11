@@ -14,11 +14,15 @@ class SpringViewController: UIViewController {
     @IBOutlet var infoTextLabel: UILabel!
     @IBOutlet var nextAnimationButton: UIButton!
 
-    let animations = DataManager.shared.animationPresets.shuffled()
-    let curves = DataManager.shared.animationCurves.shuffled()
+//    let animations = DataManager.shared.animationPresets.shuffled()
+//    let curves = DataManager.shared.animationCurves.shuffled()
+//    var currentIndices = 0
+
     var nextSpring = SpringView()
+    var animationSettings = Animation.getRandomAnimation()
+
     
-    var currentIndices = 0 //: (animation: Int, curve: Int) = (1, 4)
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,35 +30,38 @@ class SpringViewController: UIViewController {
         nextSpring = springView
         
         infoTextLabel.transform = CGAffineTransform(rotationAngle: 0.14)
-        infoTextLabel.text = ""
+        infoTextLabel.text = "Animation parameters"
         nextAnimationButton.layer.cornerRadius = 15
-        
-//        nextAnimationButton.setTitle("432", for: .normal)
         
     }
 
     
     
-//    @IBAction func buttonPressed()
+//    @IBAction func runButtonPressed()
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-    
-        //TODO
+    @IBAction func runButtonPressed(_ sender: UIButton) {
+        setConfNextSpring()
         
-        sender.setTitle("Run \(animations[currentIndices + 1 ])", for: .normal)
+        sender.setTitle("Run \(nextSpring.animation)", for: .normal)
         
-        nextSpring.animation = animations[currentIndices]
-        nextSpring.curve = curves[currentIndices]
+        infoTextLabel.text = getInfoOfSpring()
+        
+        springView = nextSpring
+        springView.animate()
+        animationSettings = Animation.getRandomAnimation()
+        
+//        nextSpring.animation = animations[currentIndices]
+//        nextSpring.curve = curves[currentIndices]
         
 //        springView.animation = animations[currentIndices]
 //        springView.curve = curves[currentIndices]
-        springView = nextSpring
-        springView.animate()
+//        springView = nextSpring
+//        springView.animate()
         
         
-        infoTextLabel.text = getInfoOfSpring()
-        infoTextLabel.textAlignment = .right
-        currentIndices += 1
+//        infoTextLabel.text = getInfoOfSpring()
+//        infoTextLabel.textAlignment = .right
+//        currentIndices += 1
         
         
         
@@ -68,18 +75,23 @@ class SpringViewController: UIViewController {
     
     
     private func getInfoOfSpring() -> String {
-        //        springView.animation
         return """
- Animation: \(springView.animation)
- Curve: \(springView.curve)
- Duration: \(springView.duration)
- """
-//        "1234567890-\n12345678901234567890"
+Animation: \(springView.animation)
+Curve: \(springView.curve)
+Duration: \(String(format: "%.2f", springView.duration))
+Deley: \(String(format: "%.2f", springView.delay))
+Force: \(String(format: "%.2f", springView.force))
+"""
     }
     
-//    private func setInfoTextLabel(from: String ) {
-//
-//    }
+    private func setConfNextSpring()  {
+        nextSpring.animation = animationSettings.preset
+        nextSpring.curve = animationSettings.curve
+        nextSpring.delay = CGFloat(animationSettings.deley)
+        nextSpring.force = CGFloat(animationSettings.force)
+        nextSpring.duration = CGFloat(animationSettings.duratinon)
+    }
+
     
 }
 

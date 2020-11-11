@@ -5,15 +5,13 @@
 //  Created by Сергей on 11.11.2020.
 //
 
- 
-import Spring
 
 struct Animation{
     var preset: String
     var curve: String
-    var force: CGFloat
-    var duratinon: CGFloat
-    var deley: CGFloat
+    var force: Float
+    var duratinon: Float
+    var deley: Float
 }
  
 extension Animation {
@@ -22,9 +20,9 @@ extension Animation {
         Animation(
             preset: DataManager.shared.animationPresets.randomElement() ?? "",
             curve: DataManager.shared.animationCurves.randomElement() ?? "",
-            force: CGFloat.random(in: 1...5),
-            duratinon: CGFloat.random(in: 0.5...5),
-            deley: CGFloat.random(in: 0...5)
+            force: Float.random(in: 1...5),
+            duratinon: Float.random(in: 0.5...5),
+            deley: Float.random(in: 0...5)
         )
     }
 }
