@@ -13,36 +13,62 @@ class SpringViewController: UIViewController {
     @IBOutlet var springView: SpringView!
     @IBOutlet var infoTextLabel: UILabel!
     @IBOutlet var nextAnimationButton: UIButton!
+
+    let animations = DataManager.shared.animationPresets.shuffled()
+    let curves = DataManager.shared.animationCurves.shuffled()
+    var nextSpring = SpringView()
     
-//    @IBOutlet var infoText: SpringView!
+    var currentIndices = 0 //: (animation: Int, curve: Int) = (1, 4)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        infoTextLabel.transform = CGAffineTransform(rotationAngle: 0.14)
+        nextSpring = springView
         
+        infoTextLabel.transform = CGAffineTransform(rotationAngle: 0.14)
+        infoTextLabel.text = ""
         nextAnimationButton.layer.cornerRadius = 15
+        
+        nextAnimationButton.setTitle("432", for: .normal)
+        
     }
 
     
     
-    
     @IBAction func buttonPressed() {
         
-        
-        springView.animation = "flipX"
-    
+        //TODO
         
         
-//        inf÷oText.animate()
+        nextSpring.animation = animations[currentIndices]
+        nextSpring.curve = curves[currentIndices]
         
-        
-//        imageSpring.animation = "flipX"
-        springView.curve = "easeIn"
-        springView.duration = 1
+//        springView.animation = animations[currentIndices]
+//        springView.curve = curves[currentIndices]
+        springView = nextSpring
         springView.animate()
+        
+        infoTextLabel.text = "kjkjn"
+//        infoTextLabel.textAlignment = .right
+        currentIndices += 1
+        
+        
+//        print(getInfoOfSpring())
+        
+        
+        nextAnimationButton.titleLabel?.text = getInfoOfSpring()
     }
     
+    
+    private func getInfoOfSpring() -> String {
+//        springView.animation
+         "\(springView.animation)\n\(springView.duration)\n \(springView.curve)"
+//        "1234567890-\n12345678901234567890"
+    }
+    
+//    private func setInfoTextLabel(from: String ) {
+//
+//    }
     
 }
 
