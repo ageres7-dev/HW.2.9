@@ -72,9 +72,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentSpring" destination="hXt-If-wiU" id="YsN-b4-waF"/>
                         <outlet property="infoTextLabel" destination="9r2-5N-nVC" id="Qr4-Tt-1Uv"/>
                         <outlet property="nextAnimationButton" destination="SfH-nI-Okg" id="WGK-39-zX2"/>
-                        <outlet property="springView" destination="hXt-If-wiU" id="YsN-b4-waF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -6,7 +6,7 @@
 //
 
 
-struct Animation{
+struct Animation: Hashable {
     var preset: String
     var curve: String
     var force: Float
@@ -25,9 +25,75 @@ extension Animation {
             deley: Float.random(in: 0...5)
         )
     }
+    
+    static func getAnimations() -> [Animation] {
+        //"squeeze", "flash",
+//        "wobble", "swing"
+        let animations = [
+            Animation(preset: "slideLeft",
+                      curve: "easeOutExpo",
+                      force: 1,
+                      duratinon: 1,
+                      deley: 1),
+            Animation(preset: "fadeInLeft",
+                      curve: "easeOutExpo",
+                      force: 1,
+                      duratinon: 1,
+                      deley: 0),
+            Animation(preset: "flipX",
+                      curve: "easeOutExpo",
+                      force: 1,
+                      duratinon: 1,
+                      deley: 1),
+            Animation(preset: "squeeze",
+                      curve: "easeOutExpo",
+                      force: 0.5,
+                      duratinon: 3,
+                      deley: 1),
+            Animation(preset: "swing",
+                      curve: "easeOutExpo",
+                      force: 1,
+                      duratinon: 1,
+                      deley: 1),
+            ]
+        
+    return animations
+        
+    }
+    
+    enum AnimationPreset: String {
+        case slideLeft
+        case slideRight
+        case slideDown
+        case slideUp
+        case squeezeLeft
+        case squeezeRight
+        case squeezeDown
+        case squeezeUp
+        case fadeIn
+        case fadeOut
+        case fadeOutIn
+        case fadeInLeft
+        case fadeInRight
+        case fadeInDown
+        case fadeInUp
+        case zoomIn
+        case zoomOut
+        case fall
+        case shake
+        case pop
+        case flipX
+        case flipY
+        case morph
+        case squeeze
+        case flash
+        case wobble
+        case swing
+    }
+    
 }
- 
- 
+
+
  
 
 
