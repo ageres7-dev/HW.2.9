@@ -52,7 +52,7 @@ class SpringViewController: UIViewController {
         springView.animate()
         
         infoTextLabel.text = getInfoOfSpring()
-//        infoTextLabel.textAlignment = .right
+        infoTextLabel.textAlignment = .right
         currentIndices += 1
         
         
@@ -67,8 +67,12 @@ class SpringViewController: UIViewController {
     
     
     private func getInfoOfSpring() -> String {
-//        springView.animation
-         "\(springView.animation)\n\(springView.duration)\n \(springView.curve)"
+        //        springView.animation
+        return """
+ Animation: \(springView.animation)
+ Curve: \(springView.curve)
+ Duration: \(springView.duration)
+ """
 //        "1234567890-\n12345678901234567890"
     }
     
