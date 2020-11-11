@@ -29,16 +29,19 @@ class SpringViewController: UIViewController {
         infoTextLabel.text = ""
         nextAnimationButton.layer.cornerRadius = 15
         
-        nextAnimationButton.setTitle("432", for: .normal)
+//        nextAnimationButton.setTitle("432", for: .normal)
         
     }
 
     
     
-    @IBAction func buttonPressed() {
-        
+//    @IBAction func buttonPressed()
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+    
         //TODO
         
+        sender.setTitle("Next \(animations[currentIndices + 1 ])", for: .normal)
         
         nextSpring.animation = animations[currentIndices]
         nextSpring.curve = curves[currentIndices]
@@ -48,15 +51,18 @@ class SpringViewController: UIViewController {
         springView = nextSpring
         springView.animate()
         
-        infoTextLabel.text = "kjkjn"
+        infoTextLabel.text = getInfoOfSpring()
 //        infoTextLabel.textAlignment = .right
         currentIndices += 1
+        
+        
+        
         
         
 //        print(getInfoOfSpring())
         
         
-        nextAnimationButton.titleLabel?.text = getInfoOfSpring()
+//        nextAnimationButton.titleLabel?.text = getInfoOfSpring()
     }
     
     
