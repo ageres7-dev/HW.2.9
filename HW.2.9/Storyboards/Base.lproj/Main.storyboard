@@ -22,7 +22,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kyle3" translatesAutoresizingMaskIntoConstraints="NO" id="Lmx-f5-psc">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="288"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проверка текста в блоке сауспарка" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-5N-nVC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation parameters" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-5N-nVC">
                                         <rect key="frame" x="115.33333333333336" y="19" width="150.66666666666663" height="112"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="112" id="0PZ-AN-6EP"/>
@@ -58,7 +58,7 @@
                                     <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="runButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBE-oY-0qf"/>
+                                    <action selector="runButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="F8y-HB-2su"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,7 +74,7 @@
                     <connections>
                         <outlet property="currentSpring" destination="hXt-If-wiU" id="YsN-b4-waF"/>
                         <outlet property="infoTextLabel" destination="9r2-5N-nVC" id="Qr4-Tt-1Uv"/>
-                        <outlet property="nextAnimationButton" destination="SfH-nI-Okg" id="WGK-39-zX2"/>
+                        <outlet property="runButton" destination="SfH-nI-Okg" id="khy-Ju-8QF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
